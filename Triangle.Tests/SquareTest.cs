@@ -12,14 +12,14 @@ namespace Triangle.Tests
         {
             Square square = new Square();
             double S = square.SquareCalculate(3, 4, 5);
-            Assert.IsNotNull(S);
+            Assert.AreEqual(6, S);
         }
         [TestMethod]
         public void Simple2Test()
         {
             Square square = new Square(5, 4, 3);
             double S = square.SquareCalculate();
-            Assert.IsNotNull(S);
+            Assert.AreEqual(6, S);
         }
         [TestMethod]
         public void NotTriangleTest()
