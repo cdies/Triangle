@@ -14,18 +14,18 @@ namespace Triangle
 
             try
             {
-                Console.WriteLine("input A: ");
+                Console.WriteLine("Введите сторону A: ");
                 A = Convert.ToDouble(Console.ReadLine());
 
-                Console.WriteLine("input B: ");
+                Console.WriteLine("Введите сторону B: ");
                 B = Convert.ToDouble(Console.ReadLine());
 
-                Console.WriteLine("input C: ");
+                Console.WriteLine("Введите сторону C: ");
                 C = Convert.ToDouble(Console.ReadLine());
             }
             catch (FormatException)
             {
-                Console.WriteLine("Error: You input not number!");
+                Console.WriteLine("Error: Вводите только числа!");
                 Console.ReadLine();
                 return;
             }
@@ -37,12 +37,13 @@ namespace Triangle
             Square square = new Square();
             new NotTriangle(square);
             S = square.SquareCalculate(A, B, C);
-            Console.WriteLine("Square " + S);
+            Console.WriteLine("Площадь треугольника: " + S);
 
             Console.ReadLine();
         }
     }
 
+    //паттерн observer
     class NotTriangle
     {
         public NotTriangle(Square square)
@@ -51,7 +52,7 @@ namespace Triangle
         }
         void StopCalculate()
         {
-            Console.WriteLine("Not triangle!");
+            Console.WriteLine("Не треугольник!");
         }
     }
 }

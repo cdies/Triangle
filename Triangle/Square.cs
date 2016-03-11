@@ -29,6 +29,7 @@ namespace Triangle
         {
             if (A + B < C || A + C < B || B + C < A || A == 0 || B == 0 || C == 0)
             {
+                //паттерн observer
                 if (Message != null)
                     Message();
 
