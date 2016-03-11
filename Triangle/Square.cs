@@ -27,7 +27,7 @@ namespace Triangle
 
         public double SquareCalculate(double A, double B, double C)
         {
-            if (A + B < C || A + C < B || B + C < A || A == 0 || B == 0 || C == 0)
+            if (A + B <= C || A + C <= B || B + C <= A || A == 0 || B == 0 || C == 0)
             {
                 //паттерн observer
                 if (Message != null)
